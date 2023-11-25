@@ -16,7 +16,7 @@ class FileController extends Controller
 
     public function downloadPdf()
     {
-        $path = storage_path('app/storage/jarji-abuashvili-cv.pdf');
+        $path = storage_path('app/public/files/Jyv0JMYQ40PR7vhsdzTIMXMx2wB7d2nhIkcTteDC.pdf');
 
         return response()->download($path);
     }
