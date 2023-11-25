@@ -18,6 +18,6 @@ class FileController extends Controller
     {
         $path = 'https://general-api.jarji-abuashvili.link/pdfs/jarji-abuashvili-cv.pdf';
 
-        return response()->json($path);
+        return response()->download($path);
     }
 }
