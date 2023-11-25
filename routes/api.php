@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['controller' => FileController::class], function () {
-    // Route::post('/file', 'upload')->name('file.upload');
+    Route::post('/file', 'upload')->name('file.upload');
     Route::get('/download-pdf', 'downloadPdf')->name('file.download');
 });
 

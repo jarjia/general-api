@@ -7,12 +7,12 @@ use Illuminate\Support\Facades\Storage;
 
 class FileController extends Controller
 {
-    // public function upload(Request $request)
-    // {
-    //     $file = request()->file('file')->store('files', 'public');
+    public function upload(Request $request)
+    {
+        $file = request()->file('file')->store('files', 'public');
 
-    //     return response()->json($file);
-    // }
+        return response()->json($file);
+    }
 
     public function downloadPdf()
     {
