@@ -16,7 +16,8 @@ class FileController extends Controller
 
     public function downloadPdf()
     {
-        $path = str_replace('\\', '', asset('pdfs/jarji-abuashvili-cv.pdf'));
+        $str = asset('pdfs/jarji-abuashvili-cv.pdf');
+        $path = str_replace('\\', '', $str);
 
         return response()->json($path);
     }
