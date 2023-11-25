@@ -7,18 +7,16 @@ use Illuminate\Support\Facades\Storage;
 
 class FileController extends Controller
 {
-    public function upload(Request $request)
-    {
-        $file = request()->file('file')->store('files', 'public');
+    // public function upload(Request $request)
+    // {
+    //     $file = request()->file('file')->store('files', 'public');
 
-        return response()->json($file);
-    }
+    //     return response()->json($file);
+    // }
 
-    public function downloadPdf($filename)
+    public function downloadPdf()
     {
-        // $path = asset('/storage/files/' . $filename);
-        // $path = 'http://localhost:8000/storage/files/' . $filename;
-        $path = storage_path('app/public/files/' . $filename);
+        $path = storage_path('app/public/files/' . 'jarji-abuashvili-cv.pdf');
 
         return response()->download($path);
     }

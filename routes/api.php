@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['controller' => FileController::class], function () {
-    Route::post('/file', 'upload')->name('file.upload');
-    Route::get('/download-pdf/{filename}', 'downloadPdf')->name('file.download');
+    // Route::post('/file', 'upload')->name('file.upload');
+    Route::get('/download-pdf', 'downloadPdf')->name('file.download');
+});
+
+Route::group(['controller' => MailController::class], function () {
+    Route::post('/send', 'send')->name('send.mail');
 });
