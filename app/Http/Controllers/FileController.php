@@ -18,6 +18,6 @@ class FileController extends Controller
     {
         $path = asset('pdfs/jarji-abuashvili-cv.pdf');
 
-        return response()->download($path);
+        return response()->json($path);
     }
 }
