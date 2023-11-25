@@ -27,7 +27,7 @@ class SendMail extends Mailable
 
     public function build()
     {
-        return $this->from(address: $this->sender, name: 'From portfolio')
+        return $this->from(address: $this->sender, name: $this->sender)
             ->subject(subject: $this->title)
             ->view('mail.contact', [
                 'text' => $this->text
